@@ -1,0 +1,61 @@
+<html>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<h1 style="text-align:center;margin-top: 50px;">This is the third test</h1>
+
+	<br/><br/>
+
+	<select id="countriesDropDown">
+		<option value="">- Choose a country -</option>
+		<option value="russia">Russian Federation</option>
+		<option value="usa">United States of America</option>
+		<option value="uk">United Kingdom</option>
+	</select>
+
+	<br/><br/>
+
+	<div id="targetDiv"></div>
+
+	<br clear="both" />
+
+	<!-- JavaScript goes here... -->
+	<script type="text/javascript">
+	// JS comment: this is jQuery stuff
+	$(document).ready(function(){
+		$('#countriesDropDown').change(function(){
+			switch ($(this).val()) {
+				case "russia":
+					$("#targetDiv").html("Russia is Chosen in the Select Box");
+					break;
+				case "usa":
+					$("#targetDiv").html("USA is Chosen in the Select Box");
+					break;
+				case "uk":
+					$("#targetDiv").html("UK is Chosen in the Select Box");
+					break;
+				default:
+					$("#targetDiv").html(""); // set as empty!
+					break;
+			}
+
+			return false;
+		});
+	});
+	</script>
+
+	<!-- CSS goes here... -->
+	<style type="text/css">
+		/* CSS comment: you can set up Body width! And then align it by Center! */
+		body {
+			width: 60%;
+			margin: 0 auto;
+			font-size: 2em;
+		}
+		#countriesDropDown {
+			padding: 5px;
+			font-size: 0.5em;
+		}
+	</style>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<h1 style="text-align:center;margin-top: 50px;">This is the second test</h1>
+
+	<br/><br/>
+
+	<button id="daButton">Click me to see how deep the rabbit hole goes</button>
+
+	<div id="targetDiv"></div>
+
+	<br clear="both" />
+
+	<!-- JavaScript goes here... -->
+	<script type="text/javascript">
+	// JS comment: this is jQuery stuff
+	$(document).ready(function(){
+		$('#daButton').click(function(){
+			$("#targetDiv").html("Behold the Power of jQuery!");
+
+			return false;
+		});
+	});
+	</script>
+
+	<!-- CSS goes here... -->
+	<style type="text/css">
+		/* CSS comment: you can set up Body width! And then align it by Center! */
+		body {
+			width: 60%;
+			margin: 0 auto;
+			font-size: 2em;
+		}
+		#daButton {
+			float:left;
+			padding: 5px;
+			font-size: 0.5em;
+		}
+		#targetDiv {
+			float: right;
+		}
+	</style>
+
+</html>
