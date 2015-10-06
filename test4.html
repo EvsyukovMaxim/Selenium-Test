@@ -8,7 +8,7 @@
 
 	<select id="countriesDropDown">
 		<option value="">- Choose a country -</option>
-		<option value="russia"></option>
+		<option value="russia">Русская Федерация</option>
 		<option value="usa">United States of America</option>
 		<option value="uk">United Kingdom</option>
 	</select>
@@ -26,13 +26,13 @@
 		$('#countriesDropDown').change(function(){
 			switch ($(this).val()) {
 				case "russia":
-					$("#targetDiv").html("Russia is Freaking Perfect);
+					$("#targetDiv").html("Russia is Freaking Perfect");
 					break;
 				case "usa":
 					$("#targetDiv").html("USA, No you can't");
 					break;
 				case "uk":
-					$("#targetDiv").html("UK is God save the Queen);
+					$("#targetDiv").html("UK is God save the Queen");
 					break;
 				default:
 					$("#targetDiv").html(""); // set as empty!
