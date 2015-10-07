@@ -12,9 +12,10 @@ class OpenPageTest(unittest.TestCase):
  
  	def test_assert(self):
  		driver = self.driver
- 		i = driver.find_element_by_id("daButton")
- 		i.click()
-		self.assertIn("Behold the Power of jQuery!", i.text)
+ 		button = driver.find_element_by_id("daButton")
+ 		button.click()
+ 		div = driver.find_element_by_id("targetDiv")
+		self.assertIn("Behold the Power of jQuery!", div.text)
  
  	def tearDown(self):
  			self.driver.quit()
