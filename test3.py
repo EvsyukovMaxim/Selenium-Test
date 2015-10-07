@@ -15,11 +15,9 @@ class OpenPageTest(unittest.TestCase):
 		countriesDropDown = driver.find_element_by_css_selector("select#countriesDropDown > option[value='russia']").click()
 		russianText = driver.find_element_by_css_selector("#targetDiv")
 		self.assertTrue("Russia is Chosen in the Select Box", russianText.text)
-
 		countriesDropDown = driver.find_element_by_css_selector("select#countriesDropDown > option[value='usa']").click()
 		russianText = driver.find_element_by_css_selector("#targetDiv")
 		self.assertTrue("USA is Chosen in the Select Box", russianText.text)
-		
 		countriesDropDown = driver.find_element_by_css_selector("select#countriesDropDown > option[value='uk']").click()
 		russianText = driver.find_element_by_css_selector("#targetDiv")
 		self.assertTrue("UK is Chosen in the Select Box", russianText.text)
