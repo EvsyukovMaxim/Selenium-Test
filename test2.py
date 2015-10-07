@@ -8,13 +8,14 @@ class OpenPageTest(unittest.TestCase):
 
 	def setUp(self):
 		self.driver = webdriver.Firefox()
+		#self.driver.get("file:///usr/local/var/www/Selenium-Test/test2.html")
 		self.driver.get("file:///Users/maksimevsukov/Documents/Selenium-Test:/test2.html")
 
 	def test_assert(self):
 		driver = self.driver
 		i = driver.find_element_by_id("daButton")
 		i.click()
-		self.assertTrue("Behold the Power of jQuery!", i.text)
+		self.assertIn("Behold the Power of jQuery!", i.text)
 
 	def tearDown(self):
 			self.driver.quit()
